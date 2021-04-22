@@ -1,0 +1,12 @@
+{
+  "name": "inkoop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "devserver": "live-server --browser=firefox",
+    "start": "npm-run --parallel devserver"
+  },
+  "author": "",
+  "license": "ISC"
+}

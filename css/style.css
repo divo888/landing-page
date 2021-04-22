@@ -1,0 +1,122 @@
+body {
+  background-color: #f7eaea11;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 41vh min-content 30vw repeat(2, 1fr);
+  grid-template-columns:
+    [sidebar-start] 10rem [sidebar-end full-start] 1fr [center-start] repeat(
+      5,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    [center-end] 1fr [full-end];
+}
+
+.sidebar {
+  display: grid;
+  grid-column: sidebar-start / sidebar-end;
+  grid-row: 1 / -1;
+}
+@media only screen and (max-width: 700px) {
+  .sidebar {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
+  li {
+    opacity: 0;
+  }
+}
+.h2 {
+  text-align: center;
+  font-weight: bolder;
+  margin-bottom: 15px;
+}
+
+li {
+  margin-bottom: 30px;
+  color: rgba(73, 72, 72, 0.467);
+  font-weight: 80;
+}
+.list {
+  list-style: none;
+  margin-bottom: 200px;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+}
+.btn {
+  border: none;
+  padding: 1rem 10px;
+  background-color: orangered;
+  border-radius: 25px;
+  color: aliceblue;
+  margin-top: 20px;
+}
+@media only screen and (max-width: 1000px) {
+  .btn {
+    opacity: 0;
+  }
+}
+.header {
+  display: grid;
+  grid-column: 3 / 6;
+  align-items: flex-end;
+  font-size: 2.1rem;
+}
+@media only screen and (max-width: 1000px) {
+  .header {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .header {
+    font-size: 1.2rem;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    align-items: flex-start;
+    margin-right: 25px;
+  }
+}
+
+.description {
+  font-size: minmax(15px, min-content);
+  color: rgba(77, 75, 75, 0.533);
+  display: grid;
+  grid-column: 6 / 7;
+  align-self: center;
+}
+
+.border {
+  font-size: medium;
+  color: red;
+}
+
+.product_cards {
+  display: grid;
+  grid-column: 3 / 8;
+  grid-row: 3 / 4;
+
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  grid-template-rows: 30vh min-content;
+  grid-gap: 3rem;
+}
+
+.food {
+  background-color: #ffff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 35px rgb(95, 94, 94);
+}
+
+.img--1 {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+}
